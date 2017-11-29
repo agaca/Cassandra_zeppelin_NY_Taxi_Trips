@@ -1,0 +1,1012 @@
+{
+  "paragraphs": [
+    {
+      "text": "describe keyspaces;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 12, 2017 6:19:24 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cnav class\u003d\"navbar navbar-default\"\u003e\n    \u003cul class\u003d\"nav navbar-nav\"\u003e\n        \n\n\u003cli role\u003d\"presentation\" class\u003d\"dropdown\"\u003e\n    \u003ca class\u003d\"dropdown-toggle\" data-toggle\u003d\"dropdown\" role\u003d\"button\" aria-haspopup\u003d\"true\" aria-expanded\u003d\"false\"\u003e\n        \u003cspan class\u003d\"text-muted\"\u003e\u003ci class\u003d\"glyphicon glyphicon-dashboard\"/\u003e\u0026nbsp;\u003cstrong\u003eTest Cluster\u003c/strong\u003e\u003c/span\u003e\n        \u003cspan class\u003d\"text-muted caret\"\u003e\u003c/span\u003e\n        \u003cul class\u003d\"dropdown-menu\"\u003e\n            \u003cli class\u003d\"dropdown-header\"\u003e\u003cspan class\u003d\"text-danger\"\u003eKeyspaces\u003c/span\u003e\u003c/li\u003e\n                        \u003cli\u003e\n                \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1ccb93a0-af69-11e7-8833-53bc5c887469\"\u003e\n                    \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;examples\u003c/span\u003e\n                \u003c/a\u003e\n            \u003c/li\u003e\n                        \u003cli\u003e\n                \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1ccd1a40-af69-11e7-8833-53bc5c887469\"\u003e\n                    \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;simplex\u003c/span\u003e\n                \u003c/a\u003e\n            \u003c/li\u003e\n                        \u003cli\u003e\n                \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1ccf3d20-af69-11e7-8833-53bc5c887469\"\u003e\n                    \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;system\u003c/span\u003e\n                \u003c/a\u003e\n            \u003c/li\u003e\n                        \u003cli\u003e\n                \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd09cb0-af69-11e7-8833-53bc5c887469\"\u003e\n                    \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;system_auth\u003c/span\u003e\n                \u003c/a\u003e\n            \u003c/li\u003e\n                        \u003cli\u003e\n                \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd382e0-af69-11e7-8833-53bc5c887469\"\u003e\n                    \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;system_distributed\u003c/span\u003e\n                \u003c/a\u003e\n            \u003c/li\u003e\n                        \u003cli\u003e\n                \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd3d100-af69-11e7-8833-53bc5c887469\"\u003e\n                    \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;system_schema\u003c/span\u003e\n                \u003c/a\u003e\n            \u003c/li\u003e\n                        \u003cli\u003e\n                \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd41f20-af69-11e7-8833-53bc5c887469\"\u003e\n                    \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;system_traces\u003c/span\u003e\n                \u003c/a\u003e\n            \u003c/li\u003e\n                        \u003cli\u003e\n                \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd44630-af69-11e7-8833-53bc5c887469\"\u003e\n                    \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;utad3a\u003c/span\u003e\n                \u003c/a\u003e\n            \u003c/li\u003e\n                        \u003cli\u003e\n                \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd46d40-af69-11e7-8833-53bc5c887469\"\u003e\n                    \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;utad3b\u003c/span\u003e\n                \u003c/a\u003e\n            \u003c/li\u003e\n                        \u003cli\u003e\n                \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd46d42-af69-11e7-8833-53bc5c887469\"\u003e\n                    \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;utad5\u003c/span\u003e\n                \u003c/a\u003e\n            \u003c/li\u003e\n                    \u003c/ul\u003e\n    \u003c/a\u003e\n\u003c/li\u003e\n\n        \u003cli\u003e\n            \u003ca\u003e\u003cstrong\u003eDESCRIBE KEYSPACES;\u003c/strong\u003e\u003c/a\u003e\n        \u003c/li\u003e\n    \u003c/ul\u003e\n    \u003cul class\u003d\"nav navbar-nav navbar-right\"\u003e\n        \u003cli class\u003d\"dropdown\"\u003e\n            \u003ca class\u003d\"dropdown-toggle\" data-toggle\u003d\"dropdown\" role\u003d\"button\" aria-haspopup\u003d\"true\" aria-expanded\u003d\"false\"\u003e\n                \u003cstrong\u003eLegend\u003c/strong\u003e\n                \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n            \u003c/a\u003e\n            \u003cul class\u003d\"dropdown-menu\"\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-dashboard text-muted\" /\u003e\u0026nbsp;Cluster\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-folder-open text-danger\" /\u003e\u0026nbsp;\u0026nbsp;Keyspace\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-copyright-mark text-warning\" /\u003e\u0026nbsp;\u0026nbsp;UDT\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-th-list text-primary\" /\u003e\u0026nbsp;\u0026nbsp;Table\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-eye-open text-primary\" /\u003e\u0026nbsp;\u0026nbsp;Materialized View\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-random text-success\" /\u003e\u0026nbsp;\u0026nbsp;Function\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-retweet text-success\" /\u003e\u0026nbsp;\u0026nbsp;Aggregate\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli role\u003d\"separator\" class\u003d\"divider text-muted\"\u003e\u003c/li\u003e\n                \u003cli class\u003d\"dropdown-header\"\u003e\u003cspan class\u003d\"text-primary\"\u003eTable icons\u003c/span\u003e\u003c/li\u003e\n                \u003cli class\u003d\"bg-info\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-fullscreen\" /\u003e\u0026nbsp;\u0026nbsp;Partition Key\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-warning\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-pushpin\" /\u003e\u0026nbsp;\u0026nbsp;Static Column\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-success\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-sort\" /\u003e\u0026nbsp;\u0026nbsp;Clustering Column\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-success\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-sort-by-attributes\" /\u003e\u0026nbsp;\u0026nbsp;Clustering Order ASC\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-success\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-sort-by-attributes-alt\" /\u003e\u0026nbsp;\u0026nbsp;Clustering Order DESC\n                    \u003c/a\u003e\n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/li\u003e\n        \u003cli\u003e\n            \u003ca href\u003d\"#\"\u003e\u003c/a\u003e\n        \u003c/li\u003e\n    \u003c/ul\u003e\n\u003c/nav\u003e\n\u003chr/\u003e\n\n\u003cdiv class\u003d\"container\"\u003e\n    \u003c!-- Cluster --\u003e\n    \n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-4\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-4 col-offset-md-4\"\u003e\n        \u003cdiv class\u003d\"table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                \u003ccaption\u003e\n                    \u003ch4 class\u003d\"text-muted\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-dashboard\"/\u003e\u0026nbsp;Test Cluster\n                    \u003c/h4\u003e\n                \u003c/caption\u003e\n                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003ePartitioner\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eorg.apache.cassandra.dht.Murmur3Partitioner\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\n\n    \u003cdiv class\u003d\"row\"\u003e\u003c/div\u003e\n    \u003c!-- Keyspaces --\u003e\n    \u003ctable width\u003d\"100%\"\u003e\n        \u003ctd\u003e\u003chr /\u003e\u003c/td\u003e\n        \u003ctd style\u003d\"width:1px; padding: 0 10px; white-space: nowrap;\"\u003e\u003cstrong class\u003d\"text-danger\"\u003eKeyspaces\u003c/strong\u003e\u003c/td\u003e\n        \u003ctd\u003e\u003chr /\u003e\u003c/td\u003e\n    \u003c/table\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n        \u003cdiv class\u003d\"panel-group\" role\u003d\"tablist\" aria-multiselectable\u003d\"true\"\u003e\n\n                        \u003cdiv class\u003d\"panel panel-default\"\u003e\n                \u003cdiv class\u003d\"panel-heading\" role\u003d\"tab\"\u003e\n                    \u003ch4 class\u003d\"panel-title\"\u003e\n                        \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1ccb93a0-af69-11e7-8833-53bc5c887469\" aria-expanded\u003d\"false\"\u003e\n                            \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;examples\u003c/span\u003e\n                        \u003c/a\u003e\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv id\u003d\"1ccb93a0-af69-11e7-8833-53bc5c887469\" class\u003d\"panel-collapse collapse\" role\u003d\"tabpanel\"\u003e\n                    \u003cdiv class\u003d\"panel-body\"\u003e\n                        \n\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth class\u003d\"col-md-10\"\u003eReplication\u003c/th\u003e\n                    \u003cth class\u003d\"col-md-2\"\u003eDurable Writes\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-10\"\u003e{\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \u0027replication_factor\u0027 : \u00271\u0027}\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-2\"\u003etrue\u003c/td\u003e\n                    \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#1ccb93a1-af69-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-danger\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"1ccb93a1-af69-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE KEYSPACE examples WITH REPLICATION \u003d { \n\t\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \n\t\u0027replication_factor\u0027: \u00271\u0027 }\nAND DURABLE_WRITES \u003d true;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n                        \u003cdiv class\u003d\"panel panel-default\"\u003e\n                \u003cdiv class\u003d\"panel-heading\" role\u003d\"tab\"\u003e\n                    \u003ch4 class\u003d\"panel-title\"\u003e\n                        \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1ccd1a40-af69-11e7-8833-53bc5c887469\" aria-expanded\u003d\"false\"\u003e\n                            \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;simplex\u003c/span\u003e\n                        \u003c/a\u003e\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv id\u003d\"1ccd1a40-af69-11e7-8833-53bc5c887469\" class\u003d\"panel-collapse collapse\" role\u003d\"tabpanel\"\u003e\n                    \u003cdiv class\u003d\"panel-body\"\u003e\n                        \n\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth class\u003d\"col-md-10\"\u003eReplication\u003c/th\u003e\n                    \u003cth class\u003d\"col-md-2\"\u003eDurable Writes\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-10\"\u003e{\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \u0027replication_factor\u0027 : \u00271\u0027}\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-2\"\u003etrue\u003c/td\u003e\n                    \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#1ccd1a41-af69-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-danger\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"1ccd1a41-af69-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE KEYSPACE simplex WITH REPLICATION \u003d { \n\t\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \n\t\u0027replication_factor\u0027: \u00271\u0027 }\nAND DURABLE_WRITES \u003d true;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n                        \u003cdiv class\u003d\"panel panel-default\"\u003e\n                \u003cdiv class\u003d\"panel-heading\" role\u003d\"tab\"\u003e\n                    \u003ch4 class\u003d\"panel-title\"\u003e\n                        \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1ccf3d20-af69-11e7-8833-53bc5c887469\" aria-expanded\u003d\"false\"\u003e\n                            \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;system\u003c/span\u003e\n                        \u003c/a\u003e\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv id\u003d\"1ccf3d20-af69-11e7-8833-53bc5c887469\" class\u003d\"panel-collapse collapse\" role\u003d\"tabpanel\"\u003e\n                    \u003cdiv class\u003d\"panel-body\"\u003e\n                        \n\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth class\u003d\"col-md-10\"\u003eReplication\u003c/th\u003e\n                    \u003cth class\u003d\"col-md-2\"\u003eDurable Writes\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-10\"\u003e{\u0027class\u0027 : \u0027org.apache.cassandra.locator.LocalStrategy\u0027}\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-2\"\u003etrue\u003c/td\u003e\n                    \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#1ccf6430-af69-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-danger\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"1ccf6430-af69-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE KEYSPACE system WITH REPLICATION \u003d { \n\t\u0027class\u0027 : \u0027org.apache.cassandra.locator.LocalStrategy\u0027 }\nAND DURABLE_WRITES \u003d true;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n                        \u003cdiv class\u003d\"panel panel-default\"\u003e\n                \u003cdiv class\u003d\"panel-heading\" role\u003d\"tab\"\u003e\n                    \u003ch4 class\u003d\"panel-title\"\u003e\n                        \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd09cb0-af69-11e7-8833-53bc5c887469\" aria-expanded\u003d\"false\"\u003e\n                            \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;system_auth\u003c/span\u003e\n                        \u003c/a\u003e\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv id\u003d\"1cd09cb0-af69-11e7-8833-53bc5c887469\" class\u003d\"panel-collapse collapse\" role\u003d\"tabpanel\"\u003e\n                    \u003cdiv class\u003d\"panel-body\"\u003e\n                        \n\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth class\u003d\"col-md-10\"\u003eReplication\u003c/th\u003e\n                    \u003cth class\u003d\"col-md-2\"\u003eDurable Writes\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-10\"\u003e{\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \u0027replication_factor\u0027 : \u00271\u0027}\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-2\"\u003etrue\u003c/td\u003e\n                    \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#1cd09cb1-af69-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-danger\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"1cd09cb1-af69-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE KEYSPACE system_auth WITH REPLICATION \u003d { \n\t\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \n\t\u0027replication_factor\u0027: \u00271\u0027 }\nAND DURABLE_WRITES \u003d true;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n                        \u003cdiv class\u003d\"panel panel-default\"\u003e\n                \u003cdiv class\u003d\"panel-heading\" role\u003d\"tab\"\u003e\n                    \u003ch4 class\u003d\"panel-title\"\u003e\n                        \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd382e0-af69-11e7-8833-53bc5c887469\" aria-expanded\u003d\"false\"\u003e\n                            \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;system_distributed\u003c/span\u003e\n                        \u003c/a\u003e\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv id\u003d\"1cd382e0-af69-11e7-8833-53bc5c887469\" class\u003d\"panel-collapse collapse\" role\u003d\"tabpanel\"\u003e\n                    \u003cdiv class\u003d\"panel-body\"\u003e\n                        \n\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth class\u003d\"col-md-10\"\u003eReplication\u003c/th\u003e\n                    \u003cth class\u003d\"col-md-2\"\u003eDurable Writes\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-10\"\u003e{\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \u0027replication_factor\u0027 : \u00273\u0027}\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-2\"\u003etrue\u003c/td\u003e\n                    \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#1cd382e1-af69-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-danger\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"1cd382e1-af69-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE KEYSPACE system_distributed WITH REPLICATION \u003d { \n\t\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \n\t\u0027replication_factor\u0027: \u00273\u0027 }\nAND DURABLE_WRITES \u003d true;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n                        \u003cdiv class\u003d\"panel panel-default\"\u003e\n                \u003cdiv class\u003d\"panel-heading\" role\u003d\"tab\"\u003e\n                    \u003ch4 class\u003d\"panel-title\"\u003e\n                        \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd3d100-af69-11e7-8833-53bc5c887469\" aria-expanded\u003d\"false\"\u003e\n                            \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;system_schema\u003c/span\u003e\n                        \u003c/a\u003e\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv id\u003d\"1cd3d100-af69-11e7-8833-53bc5c887469\" class\u003d\"panel-collapse collapse\" role\u003d\"tabpanel\"\u003e\n                    \u003cdiv class\u003d\"panel-body\"\u003e\n                        \n\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth class\u003d\"col-md-10\"\u003eReplication\u003c/th\u003e\n                    \u003cth class\u003d\"col-md-2\"\u003eDurable Writes\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-10\"\u003e{\u0027class\u0027 : \u0027org.apache.cassandra.locator.LocalStrategy\u0027}\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-2\"\u003etrue\u003c/td\u003e\n                    \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#1cd3d101-af69-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-danger\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"1cd3d101-af69-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE KEYSPACE system_schema WITH REPLICATION \u003d { \n\t\u0027class\u0027 : \u0027org.apache.cassandra.locator.LocalStrategy\u0027 }\nAND DURABLE_WRITES \u003d true;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n                        \u003cdiv class\u003d\"panel panel-default\"\u003e\n                \u003cdiv class\u003d\"panel-heading\" role\u003d\"tab\"\u003e\n                    \u003ch4 class\u003d\"panel-title\"\u003e\n                        \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd41f20-af69-11e7-8833-53bc5c887469\" aria-expanded\u003d\"false\"\u003e\n                            \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;system_traces\u003c/span\u003e\n                        \u003c/a\u003e\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv id\u003d\"1cd41f20-af69-11e7-8833-53bc5c887469\" class\u003d\"panel-collapse collapse\" role\u003d\"tabpanel\"\u003e\n                    \u003cdiv class\u003d\"panel-body\"\u003e\n                        \n\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth class\u003d\"col-md-10\"\u003eReplication\u003c/th\u003e\n                    \u003cth class\u003d\"col-md-2\"\u003eDurable Writes\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-10\"\u003e{\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \u0027replication_factor\u0027 : \u00272\u0027}\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-2\"\u003etrue\u003c/td\u003e\n                    \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#1cd41f21-af69-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-danger\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"1cd41f21-af69-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE KEYSPACE system_traces WITH REPLICATION \u003d { \n\t\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \n\t\u0027replication_factor\u0027: \u00272\u0027 }\nAND DURABLE_WRITES \u003d true;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n                        \u003cdiv class\u003d\"panel panel-default\"\u003e\n                \u003cdiv class\u003d\"panel-heading\" role\u003d\"tab\"\u003e\n                    \u003ch4 class\u003d\"panel-title\"\u003e\n                        \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd44630-af69-11e7-8833-53bc5c887469\" aria-expanded\u003d\"false\"\u003e\n                            \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;utad3a\u003c/span\u003e\n                        \u003c/a\u003e\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv id\u003d\"1cd44630-af69-11e7-8833-53bc5c887469\" class\u003d\"panel-collapse collapse\" role\u003d\"tabpanel\"\u003e\n                    \u003cdiv class\u003d\"panel-body\"\u003e\n                        \n\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth class\u003d\"col-md-10\"\u003eReplication\u003c/th\u003e\n                    \u003cth class\u003d\"col-md-2\"\u003eDurable Writes\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-10\"\u003e{\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \u0027replication_factor\u0027 : \u00271\u0027}\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-2\"\u003etrue\u003c/td\u003e\n                    \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#1cd44631-af69-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-danger\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"1cd44631-af69-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE KEYSPACE utad3a WITH REPLICATION \u003d { \n\t\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \n\t\u0027replication_factor\u0027: \u00271\u0027 }\nAND DURABLE_WRITES \u003d true;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n                        \u003cdiv class\u003d\"panel panel-default\"\u003e\n                \u003cdiv class\u003d\"panel-heading\" role\u003d\"tab\"\u003e\n                    \u003ch4 class\u003d\"panel-title\"\u003e\n                        \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd46d40-af69-11e7-8833-53bc5c887469\" aria-expanded\u003d\"false\"\u003e\n                            \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;utad3b\u003c/span\u003e\n                        \u003c/a\u003e\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv id\u003d\"1cd46d40-af69-11e7-8833-53bc5c887469\" class\u003d\"panel-collapse collapse\" role\u003d\"tabpanel\"\u003e\n                    \u003cdiv class\u003d\"panel-body\"\u003e\n                        \n\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth class\u003d\"col-md-10\"\u003eReplication\u003c/th\u003e\n                    \u003cth class\u003d\"col-md-2\"\u003eDurable Writes\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-10\"\u003e{\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \u0027replication_factor\u0027 : \u00271\u0027}\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-2\"\u003etrue\u003c/td\u003e\n                    \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#1cd46d41-af69-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-danger\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"1cd46d41-af69-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE KEYSPACE utad3b WITH REPLICATION \u003d { \n\t\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \n\t\u0027replication_factor\u0027: \u00271\u0027 }\nAND DURABLE_WRITES \u003d true;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n                        \u003cdiv class\u003d\"panel panel-default\"\u003e\n                \u003cdiv class\u003d\"panel-heading\" role\u003d\"tab\"\u003e\n                    \u003ch4 class\u003d\"panel-title\"\u003e\n                        \u003ca role\u003d\"button\" data-toggle\u003d\"collapse\" data-target\u003d\"#1cd46d42-af69-11e7-8833-53bc5c887469\" aria-expanded\u003d\"false\"\u003e\n                            \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;utad5\u003c/span\u003e\n                        \u003c/a\u003e\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv id\u003d\"1cd46d42-af69-11e7-8833-53bc5c887469\" class\u003d\"panel-collapse collapse\" role\u003d\"tabpanel\"\u003e\n                    \u003cdiv class\u003d\"panel-body\"\u003e\n                        \n\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth class\u003d\"col-md-10\"\u003eReplication\u003c/th\u003e\n                    \u003cth class\u003d\"col-md-2\"\u003eDurable Writes\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-10\"\u003e{\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \u0027replication_factor\u0027 : \u00271\u0027}\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-2\"\u003etrue\u003c/td\u003e\n                    \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#1cd49450-af69-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-danger\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"1cd49450-af69-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE KEYSPACE utad5 WITH REPLICATION \u003d { \n\t\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \n\t\u0027replication_factor\u0027: \u00271\u0027 }\nAND DURABLE_WRITES \u003d true;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n                    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1507823826724_232166403",
+      "id": "20171012-175706_1966916339",
+      "dateCreated": "Oct 12, 2017 5:57:06 PM",
+      "dateStarted": "Oct 12, 2017 6:19:24 PM",
+      "dateFinished": "Oct 12, 2017 6:19:24 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE KEYSPACE online_shop\nWITH REPLICATION \u003d {\n    \u0027class\u0027: \u0027SimpleStrategy\u0027,\n    \u0027replication_factor\u0027 : 1\n};",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 6:35:29 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eCREATE KEYSPACE online_shop\nWITH REPLICATION \u003d {\n\u0027class\u0027: \u0027SimpleStrategy\u0027,\n\u0027replication_factor\u0027 : 1\n};\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1507825164714_971400379",
+      "id": "20171012-181924_606321862",
+      "dateCreated": "Oct 12, 2017 6:19:24 PM",
+      "dateStarted": "Oct 12, 2017 6:21:59 PM",
+      "dateFinished": "Oct 12, 2017 6:22:00 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "use online_shop;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 13, 2017 12:18:29 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003euse online_shop;\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1507825319102_-126890809",
+      "id": "20171012-182159_911691279",
+      "dateCreated": "Oct 12, 2017 6:21:59 PM",
+      "dateStarted": "Oct 13, 2017 12:18:29 PM",
+      "dateFinished": "Oct 13, 2017 12:18:29 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "describe keyspace online_shop;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 13, 2017 11:46:30 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cnav class\u003d\"navbar navbar-default\"\u003e\n    \u003cul class\u003d\"nav navbar-nav\"\u003e\n        \n\n\u003cli role\u003d\"presentation\" class\u003d\"dropdown\"\u003e\n    \u003ca class\u003d\"dropdown-toggle\" data-toggle\u003d\"dropdown\" role\u003d\"button\" aria-haspopup\u003d\"true\" aria-expanded\u003d\"false\"\u003e\n        \u003cspan class\u003d\"text-danger\"\u003e\u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;\u003cstrong\u003eonline_shop\u003c/strong\u003e\u003c/span\u003e\n        \u003cspan class\u003d\"text-danger caret\"\u003e\u003c/span\u003e\n        \u003cul class\u003d\"dropdown-menu\"\u003e\n            \n            \n            \n            \n                    \u003c/ul\u003e\n    \u003c/a\u003e\n\u003c/li\u003e\n        \u003cli\u003e\n            \u003ca\u003e\u003cstrong\u003eDESCRIBE KEYSPACE online_shop;\u003c/strong\u003e\u003c/a\u003e\n        \u003c/li\u003e\n    \u003c/ul\u003e\n    \u003cul class\u003d\"nav navbar-nav navbar-right\"\u003e\n        \u003cli class\u003d\"dropdown\"\u003e\n            \u003ca class\u003d\"dropdown-toggle\" data-toggle\u003d\"dropdown\" role\u003d\"button\" aria-haspopup\u003d\"true\" aria-expanded\u003d\"false\"\u003e\n                \u003cstrong\u003eLegend\u003c/strong\u003e\n                \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n            \u003c/a\u003e\n            \u003cul class\u003d\"dropdown-menu\"\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-dashboard text-muted\" /\u003e\u0026nbsp;Cluster\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-folder-open text-danger\" /\u003e\u0026nbsp;\u0026nbsp;Keyspace\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-copyright-mark text-warning\" /\u003e\u0026nbsp;\u0026nbsp;UDT\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-th-list text-primary\" /\u003e\u0026nbsp;\u0026nbsp;Table\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-eye-open text-primary\" /\u003e\u0026nbsp;\u0026nbsp;Materialized View\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-random text-success\" /\u003e\u0026nbsp;\u0026nbsp;Function\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-retweet text-success\" /\u003e\u0026nbsp;\u0026nbsp;Aggregate\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli role\u003d\"separator\" class\u003d\"divider text-muted\"\u003e\u003c/li\u003e\n                \u003cli class\u003d\"dropdown-header\"\u003e\u003cspan class\u003d\"text-primary\"\u003eTable icons\u003c/span\u003e\u003c/li\u003e\n                \u003cli class\u003d\"bg-info\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-fullscreen\" /\u003e\u0026nbsp;\u0026nbsp;Partition Key\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-warning\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-pushpin\" /\u003e\u0026nbsp;\u0026nbsp;Static Column\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-success\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-sort\" /\u003e\u0026nbsp;\u0026nbsp;Clustering Column\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-success\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-sort-by-attributes\" /\u003e\u0026nbsp;\u0026nbsp;Clustering Order ASC\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-success\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-sort-by-attributes-alt\" /\u003e\u0026nbsp;\u0026nbsp;Clustering Order DESC\n                    \u003c/a\u003e\n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/li\u003e\n        \u003cli\u003e\n            \u003ca href\u003d\"#\"\u003e\u003c/a\u003e\n        \u003c/li\u003e\n    \u003c/ul\u003e\n\u003c/nav\u003e\n\u003chr/\u003e\n\n\u003cdiv class\u003d\"container\"\u003e\n    \u003c!-- Keyspace --\u003e\n    \n\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                \n                \u003ccaption\u003e\n                    \u003ch4 class\u003d\"text-danger\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-folder-open\"/\u003e\u0026nbsp;\u0026nbsp;online_shop\n                    \u003c/h4\u003e\n                \u003c/caption\u003e\n                                \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth class\u003d\"col-md-10\"\u003eReplication\u003c/th\u003e\n                    \u003cth class\u003d\"col-md-2\"\u003eDurable Writes\u003c/th\u003e\n                \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-10\"\u003e{\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \u0027replication_factor\u0027 : \u00271\u0027}\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-2\"\u003etrue\u003c/td\u003e\n                    \u003c/tr\u003e\n                \u003ctbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#63fe9410-affb-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-danger\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"63fe9410-affb-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE KEYSPACE online_shop WITH REPLICATION \u003d { \n\t\u0027class\u0027 : \u0027org.apache.cassandra.locator.SimpleStrategy\u0027, \n\t\u0027replication_factor\u0027: \u00271\u0027 }\nAND DURABLE_WRITES \u003d true;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n    \u003c!-- Tables --\u003e\n    \u003cdiv class\u003d\"row\"\u003e\u003c/div\u003e\n    \n    \n    \n    \n    \n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1507825354343_1840607797",
+      "id": "20171012-182234_1035814956",
+      "dateCreated": "Oct 12, 2017 6:22:34 PM",
+      "dateStarted": "Oct 13, 2017 11:46:30 AM",
+      "dateFinished": "Oct 13, 2017 11:46:30 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "DROP TABLE cart;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 13, 2017 12:22:32 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eDROP TABLE cart;\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1507889974197_2074199052",
+      "id": "20171013-121934_1846702919",
+      "dateCreated": "Oct 13, 2017 12:19:34 PM",
+      "dateStarted": "Oct 13, 2017 12:22:32 PM",
+      "dateFinished": "Oct 13, 2017 12:22:32 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE TABLE cart(\n    user_id BIGINT,\n    product_name TEXT,\n    quantity INT,\n    price FLOAT,\n    total_product_price FLOAT,\n    total_price FLOAT STATIC,\n    PRIMARY KEY (user_id, product_name)\n);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 13, 2017 12:22:39 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eCREATE TABLE cart(\n    user_id BIGINT,\n    product_name TEXT,\n    quantity INT,\n    price FLOAT,\n    total_product_price FLOAT,\n    total_price FLOAT STATIC,\n    PRIMARY KEY (user_id, product_name)\n);\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1507825404837_1462845674",
+      "id": "20171012-182324_1750325366",
+      "dateCreated": "Oct 12, 2017 6:23:24 PM",
+      "dateStarted": "Oct 13, 2017 12:22:39 PM",
+      "dateFinished": "Oct 13, 2017 12:22:40 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE OR REPLACE FUNCTION scalar_multiplication(input1 int, input2 float)\nRETURNS NULL ON NULL INPUT returns float\nLANGUAGE java AS \u0027return input1 * input2;\u0027;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 15, 2017 12:42:01 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eCREATE OR REPLACE FUNCTION scalar_multiplication(input1 int, input2 float)\nRETURNS NULL ON NULL INPUT returns float\nLANGUAGE java AS \u0027return input1 * input2;\u0027;\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1507887914405_-1147460543",
+      "id": "20171013-114514_1170726018",
+      "dateCreated": "Oct 13, 2017 11:45:14 AM",
+      "dateStarted": "Oct 15, 2017 12:42:01 PM",
+      "dateFinished": "Oct 15, 2017 12:42:02 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE OR REPLACE FUNCTION scalar_add(input1 float, input2 float)\nRETURNS NULL ON NULL INPUT returns float\nLANGUAGE java AS \u0027return input1 + input2;\u0027;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 15, 2017 12:41:22 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eCREATE OR REPLACE FUNCTION scalar_add(input1 float, input2 float)\nRETURNS NULL ON NULL INPUT returns float\nLANGUAGE java AS \u0027return input1 + input2;\u0027;\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508063925117_-1768468266",
+      "id": "20171015-123845_1670877013",
+      "dateCreated": "Oct 15, 2017 12:38:45 PM",
+      "dateStarted": "Oct 15, 2017 12:41:22 PM",
+      "dateFinished": "Oct 15, 2017 12:41:23 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "INSERT INTO cart (user_id, product_name, quantity, price, total_product_price, total_price) \n    VALUES (1,\u0027Osito_peluche\u0027, 3, 12.5, scalar_multiplication(3,12.5), scalar_multiplication(3,12.5));",
+      "user": "anonymous",
+      "dateUpdated": "Oct 15, 2017 12:42:09 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eINSERT INTO cart (user_id, product_name, quantity, price, total_product_price, total_price) \n    VALUES (1,\u0027Osito_peluche\u0027, 3, 12.5, scalar_multiplication(3,12.5), scalar_multiplication(3,12.5));\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1507888373674_-68778990",
+      "id": "20171013-115253_2026275382",
+      "dateCreated": "Oct 13, 2017 11:52:53 AM",
+      "dateStarted": "Oct 15, 2017 12:42:09 PM",
+      "dateFinished": "Oct 15, 2017 12:42:09 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "BEGIN BATCH\n      UPDATE cart SET total_price \u003d scalar_add(37.5,scalar_multiplication(2,10)) WHERE user_id\u003d1 IF total_price \u003d 37.5;\n      INSERT INTO cart (user_id,  product_name, quantity, price, total_product_price)\n                 VALUES (1, \u0027Lego_Duplo\u0027, 2, 10.0, scalar_multiplication(2,10));\n  APPLY BATCH;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 15, 2017 12:51:03 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "[applied]\ntrue\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508064318304_-82896491",
+      "id": "20171015-124518_978222517",
+      "dateCreated": "Oct 15, 2017 12:45:18 PM",
+      "dateStarted": "Oct 15, 2017 12:51:03 PM",
+      "dateFinished": "Oct 15, 2017 12:51:03 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "select * from cart where user_id\u003d1;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 6:38:14 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "user_id\tproduct_name\ttotal_price\tprice\tquantity\ttotal_product_price\n1\tLego_Duplo\t57.5\t10.0\t2\t20.0\n1\tOsito_peluche\t57.5\t12.5\t3\t37.5\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1507889244528_-752793015",
+      "id": "20171013-120724_1160898300",
+      "dateCreated": "Oct 13, 2017 12:07:24 PM",
+      "dateStarted": "Oct 16, 2017 6:37:42 PM",
+      "dateFinished": "Oct 16, 2017 6:37:42 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "DROP TABLE purchase_summary;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 15, 2017 2:58:57 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eDROP TABLE purchase_summary;\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508069499461_816458138",
+      "id": "20171015-141139_461371115",
+      "dateCreated": "Oct 15, 2017 2:11:39 PM",
+      "dateStarted": "Oct 15, 2017 2:58:57 PM",
+      "dateFinished": "Oct 15, 2017 2:58:57 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE TABLE purchase_summary(\n    user_id BIGINT,\n    invoice_number BIGINT,\n    \n    product_reference INT,\n    quantity INT,\n    price FLOAT,\n    image BLOB,\n    PRIMARY KEY ((user_id, invoice_number),product_name)\n);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 5:55:18 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eCREATE TABLE purchase_summary(\n    user_id BIGINT,\n    invoice_number BIGINT,\n    product_name TEXT,\n    product_reference INT,\n    quantity INT,\n    price FLOAT,\n    image BLOB,\n    PRIMARY KEY ((user_id, invoice_number),product_name)\n);\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1507890496264_1963145061",
+      "id": "20171013-122816_588029767",
+      "dateCreated": "Oct 13, 2017 12:28:16 PM",
+      "dateStarted": "Oct 15, 2017 2:58:59 PM",
+      "dateFinished": "Oct 15, 2017 2:59:00 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "INSERT INTO purchase_summary (user_id, invoice_number, product_name, product_reference, quantity, price) \n    VALUES (1, 12, \u0027Osito_peluche\u0027, 124, 2, 12.5);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 6:49:14 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eINSERT INTO purchase_summary (user_id, invoice_number, product_name, product_reference, quantity, price) \n    VALUES (1, 12, \u0027Osito_peluche\u0027, 124, 2, 12.5);\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508172237605_-1902101479",
+      "id": "20171016-184357_2049133132",
+      "dateCreated": "Oct 16, 2017 6:43:57 PM",
+      "dateStarted": "Oct 16, 2017 6:49:14 PM",
+      "dateFinished": "Oct 16, 2017 6:49:14 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "INSERT INTO purchase_summary (user_id, invoice_number, product_name, product_reference, quantity, price) \n    VALUES (1, 12, \u0027Lego_Duplo\u0027, 123, 3, 10.0);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 6:48:35 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1508172504705_1464049680",
+      "id": "20171016-184824_1613119376",
+      "dateCreated": "Oct 16, 2017 6:48:24 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "select * from purchase_summary where user_id\u003d1 and invoice_number\u003d12 LIMIT 1;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 8:36:05 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "user_id\tinvoice_number\tproduct_name\timage\tprice\tproduct_reference\tquantity\n1\t12\tLego_Duplo\tnull\t10.0\t123\t3\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508172609545_-1426614779",
+      "id": "20171016-185009_1184575731",
+      "dateCreated": "Oct 16, 2017 6:50:09 PM",
+      "dateStarted": "Oct 16, 2017 8:36:05 PM",
+      "dateFinished": "Oct 16, 2017 8:36:05 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "describe table purchase_summary;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 15, 2017 2:58:26 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cnav class\u003d\"navbar navbar-default\"\u003e\n    \u003cul class\u003d\"nav navbar-nav\"\u003e\n        \n        \u003cli\u003e\n            \u003ca\u003e\u003cstrong\u003eDESCRIBE TABLE purchase_summary;\u003c/strong\u003e\u003c/a\u003e\n        \u003c/li\u003e\n    \u003c/ul\u003e\n    \u003cul class\u003d\"nav navbar-nav navbar-right\"\u003e\n        \u003cli class\u003d\"dropdown\"\u003e\n            \u003ca class\u003d\"dropdown-toggle\" data-toggle\u003d\"dropdown\" role\u003d\"button\" aria-haspopup\u003d\"true\" aria-expanded\u003d\"false\"\u003e\n                \u003cstrong\u003eLegend\u003c/strong\u003e\n                \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n            \u003c/a\u003e\n            \u003cul class\u003d\"dropdown-menu\"\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-dashboard text-muted\" /\u003e\u0026nbsp;Cluster\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-folder-open text-danger\" /\u003e\u0026nbsp;\u0026nbsp;Keyspace\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-copyright-mark text-warning\" /\u003e\u0026nbsp;\u0026nbsp;UDT\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-th-list text-primary\" /\u003e\u0026nbsp;\u0026nbsp;Table\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-eye-open text-primary\" /\u003e\u0026nbsp;\u0026nbsp;Materialized View\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-random text-success\" /\u003e\u0026nbsp;\u0026nbsp;Function\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-retweet text-success\" /\u003e\u0026nbsp;\u0026nbsp;Aggregate\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli role\u003d\"separator\" class\u003d\"divider text-muted\"\u003e\u003c/li\u003e\n                \u003cli class\u003d\"dropdown-header\"\u003e\u003cspan class\u003d\"text-primary\"\u003eTable icons\u003c/span\u003e\u003c/li\u003e\n                \u003cli class\u003d\"bg-info\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-fullscreen\" /\u003e\u0026nbsp;\u0026nbsp;Partition Key\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-warning\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-pushpin\" /\u003e\u0026nbsp;\u0026nbsp;Static Column\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-success\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-sort\" /\u003e\u0026nbsp;\u0026nbsp;Clustering Column\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-success\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-sort-by-attributes\" /\u003e\u0026nbsp;\u0026nbsp;Clustering Order ASC\n                    \u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli class\u003d\"bg-success\"\u003e\n                    \u003ca role\u003d\"button\"\u003e\n                        \u003ci class\u003d\"glyphicon glyphicon-sort-by-attributes-alt\" /\u003e\u0026nbsp;\u0026nbsp;Clustering Order DESC\n                    \u003c/a\u003e\n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/li\u003e\n        \u003cli\u003e\n            \u003ca href\u003d\"#\"\u003e\u003c/a\u003e\n        \u003c/li\u003e\n    \u003c/ul\u003e\n\u003c/nav\u003e\n\u003chr/\u003e\n\n\u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-2\"/\u003e\n    \u003cdiv class\u003d\"col-md-8 col-offset-md-2\"\u003e\n        \u003cdiv class\u003d\"panel panel-default table-responsive table-bordered\"\u003e\n            \u003ctable class\u003d\"table\"\u003e\n                \n                \u003ccaption\u003e\u003ch4 class\u003d\"text-primary\"\u003e\u003ci class\u003d\"glyphicon glyphicon-th-list\"/\u003e\u0026nbsp;purchase_summary\u003c/h4\u003e\u003c/caption\u003e\n                                \u003cthead\u003e\n                    \u003ctr\u003e\n                        \u003cth class\u003d\"col-md-4\"\u003eColumn Type\u003c/th\u003e\n                        \u003cth class\u003d\"col-md-4\"\u003eColumn Name\u003c/th\u003e\n                        \u003cth class\u003d\"col-md-4\"\u003eData Type\u003c/th\u003e\n                    \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                                            \n\n                    \u003ctr class\u003d\"info\"\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003e\n                            \u003ci class\u003d\"glyphicon glyphicon-fullscreen\" title\u003d\"Partition Key\"/\u003e\n                        \u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003euser_id\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003ebigint\u003c/td\u003e\n                    \u003c/tr\u003e\n                                                                    \n\n                    \u003ctr class\u003d\"info\"\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003e\n                            \u003ci class\u003d\"glyphicon glyphicon-fullscreen\" title\u003d\"Partition Key\"/\u003e\n                        \u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003einvoice_number\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003ebigint\u003c/td\u003e\n                    \u003c/tr\u003e\n                                                                    \n                    \u003ctr class\u003d\"success\"\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003e\n                            \u003ci class\u003d\"glyphicon glyphicon-sort\" title\u003d\"Clustering Column\"/\u003e\n                            \u0026nbsp;\n                            \u003ci class\u003d\"glyphicon glyphicon-sort-by-attributes\" title\u003d\"Sort ASC\"/\u003e\n                        \u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003eproduct_name\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003etext\u003c/td\u003e\n                    \u003c/tr\u003e\n                                                                    \n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003e\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003eimage\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003eblob\u003c/td\u003e\n                    \u003c/tr\u003e\n                                                                    \n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003e\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003eprice\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003efloat\u003c/td\u003e\n                    \u003c/tr\u003e\n                                                                    \n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003e\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003eproduct_reference\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003eint\u003c/td\u003e\n                    \u003c/tr\u003e\n                                                                    \n                    \u003ctr\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003e\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003equantity\u003c/td\u003e\n                        \u003ctd class\u003d\"col-md-4\"\u003eint\u003c/td\u003e\n                    \u003c/tr\u003e\n                                            \n                \u003c/tbody\u003e\n            \u003c/table\u003e\n            \u003cdiv class\u003d\"panel-footer\"\u003e\n                \u003ca data-toggle\u003d\"collapse\" data-target\u003d\"#890de220-b1a8-11e7-8833-53bc5c887469_asCQL\" class\u003d\"text-primary\"\u003e\n                    \u003cstrong\u003eAs CQL statement\u003c/strong\u003e\n                    \u003cspan class\u003d\"caret\"\u003e\u003c/span\u003e\n                \u003c/a\u003e\n                \u003cbr/\u003e\u003cbr/\u003e\n                \u003cdiv class\u003d\"collapse\" id\u003d\"890de220-b1a8-11e7-8833-53bc5c887469_asCQL\"\u003e\n                    \u003cpre class\u003d\"well\"\u003eCREATE TABLE online_shop.purchase_summary (\n    user_id bigint,\n    invoice_number bigint,\n    product_name text,\n    image blob,\n    price float,\n    product_reference int,\n    quantity int,\n    PRIMARY KEY ((user_id, invoice_number), product_name)\n) WITH read_repair_chance \u003d 0.0\n   AND dclocal_read_repair_chance \u003d 0.1\n   AND gc_grace_seconds \u003d 864000\n   AND bloom_filter_fp_chance \u003d 0.01\n   AND caching \u003d { \u0027keys\u0027 : \u0027ALL\u0027, \u0027rows_per_partition\u0027 : \u0027NONE\u0027 }\n   AND comment \u003d \u0027\u0027\n   AND compaction \u003d { \u0027class\u0027 : \u0027org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy\u0027, \u0027max_threshold\u0027 : 32, \u0027min_threshold\u0027 : 4 }\n   AND compression \u003d { \u0027chunk_length_in_kb\u0027 : 64, \u0027class\u0027 : \u0027org.apache.cassandra.io.compress.LZ4Compressor\u0027 }\n   AND default_time_to_live \u003d 0\n   AND speculative_retry \u003d \u002799PERCENTILE\u0027\n   AND min_index_interval \u003d 128\n   AND max_index_interval \u003d 2048\n   AND crc_check_chance \u003d 1.0;\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n            \u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-2\"\u003e\u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508067902283_1347144007",
+      "id": "20171015-134502_385812159",
+      "dateCreated": "Oct 15, 2017 1:45:02 PM",
+      "dateStarted": "Oct 15, 2017 2:58:27 PM",
+      "dateFinished": "Oct 15, 2017 2:58:27 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "DROP TABLE purchase_list_byuser;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 15, 2017 2:59:20 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eDROP TABLE purchase_list_byuser;\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508072329534_360609928",
+      "id": "20171015-145849_1186483138",
+      "dateCreated": "Oct 15, 2017 2:58:49 PM",
+      "dateStarted": "Oct 15, 2017 2:59:20 PM",
+      "dateFinished": "Oct 15, 2017 2:59:20 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE TABLE purchase_list_byuser(\n    user_id BIGINT,\n    invoice_number BIGINT,\n    total_price FLOAT,\n    purchase_ts TIMESTAMP,\n    PRIMARY KEY (user_id, purchase_ts)\n) WITH CLUSTERING ORDER BY (purchase_ts DESC);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 5:48:07 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eCREATE TABLE purchase_list_byuser(\n    user_id BIGINT,\n    invoice_number BIGINT,\n    total_price FLOAT,\n    purchase_date TIMESTAMP,\n    PRIMARY KEY (user_id, purchase_date)\n) WITH CLUSTERING ORDER BY (purchase_date DESC);\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508068088624_1035325543",
+      "id": "20171015-134808_1143628982",
+      "dateCreated": "Oct 15, 2017 1:48:08 PM",
+      "dateStarted": "Oct 15, 2017 2:59:24 PM",
+      "dateFinished": "Oct 15, 2017 2:59:25 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE TABLE marketing_products_bymonth(\n    month_year INT,\n    product_name TEXT,\n    price FLOAT,\n    image BLOB,\n    PRIMARY KEY (month_year, product_name)\n);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 6:09:21 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1508070754422_-403165900",
+      "id": "20171015-143234_902763840",
+      "dateCreated": "Oct 15, 2017 2:32:34 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE TABLE bestselling_products_bymonth(\n    month_year INT,\n    sales_number INT,\n    product_name TEXT,\n    price FLOAT,\n    image BLOB,\n    PRIMARY KEY (month_year, sales_number)\n) WITH CLUSTERING ORDER BY (sales_number DESC);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 6:12:47 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1508144741074_-1797315452",
+      "id": "20171016-110541_692899355",
+      "dateCreated": "Oct 16, 2017 11:05:41 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE TABLE lastcataloged_products_bymonth(\n    month_year INT,\n    catalog_entry TIMESTAMP,\n    product_name TEXT,\n    price FLOAT,\n    image BLOB,\n    PRIMARY KEY (month_year, catalog_entry)\n) WITH CLUSTERING ORDER BY (catalog_entry DESC);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 6:16:38 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1508144777183_144020229",
+      "id": "20171016-110617_1624552362",
+      "dateCreated": "Oct 16, 2017 11:06:17 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "DROP TABLE product_byname;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 8:35:47 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eDROP TABLE product_byname;\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508169561290_-460185424",
+      "id": "20171016-175921_46725785",
+      "dateCreated": "Oct 16, 2017 5:59:21 PM",
+      "dateStarted": "Oct 16, 2017 8:35:47 PM",
+      "dateFinished": "Oct 16, 2017 8:35:47 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE TABLE product_byname(\n    product_name TEXT,\n    product_reference INT,\n    price FLOAT,\n    image BLOB,\n    description TEXT,\n    PRIMARY KEY (product_name)\n);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 8:35:29 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eCREATE TABLE product_byname(\n    product_name TEXT,\n    product_reference INT,\n    price FLOAT,\n    image BLOB,\n    description TEXT,\n    PRIMARY KEY (product_name)\n);\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508145882776_-805364913",
+      "id": "20171016-112442_311983532",
+      "dateCreated": "Oct 16, 2017 11:24:42 AM",
+      "dateStarted": "Oct 16, 2017 8:35:29 PM",
+      "dateFinished": "Oct 16, 2017 8:35:30 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "INSERT INTO product_byname(product_name, product_reference, price, marketing_choice) \n    VALUES (\u0027Playmobil_Granjero\u0027, 4, 6.5, false);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 8:35:33 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "com.datastax.driver.core.exceptions.InvalidQueryException: Unknown identifier marketing_choice\n\tat com.datastax.driver.core.exceptions.InvalidQueryException.copy(InvalidQueryException.java:50)\n\tat com.datastax.driver.core.DriverThrowables.propagateCause(DriverThrowables.java:37)\n\tat com.datastax.driver.core.DefaultResultSetFuture.getUninterruptibly(DefaultResultSetFuture.java:245)\n\tat com.datastax.driver.core.AbstractSession.execute(AbstractSession.java:63)\n\tat org.apache.zeppelin.cassandra.EnhancedSession.execute(EnhancedSession.scala:200)\n\tat org.apache.zeppelin.cassandra.InterpreterLogic$$anonfun$8.apply(InterpreterLogic.scala:155)\n\tat org.apache.zeppelin.cassandra.InterpreterLogic$$anonfun$8.apply(InterpreterLogic.scala:155)\n\tat scala.collection.immutable.List.map(List.scala:273)\n\tat org.apache.zeppelin.cassandra.InterpreterLogic.interpret(InterpreterLogic.scala:155)\n\tat org.apache.zeppelin.cassandra.CassandraInterpreter.interpret(CassandraInterpreter.java:200)\n\tat org.apache.zeppelin.interpreter.LazyOpenInterpreter.interpret(LazyOpenInterpreter.java:97)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:498)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:175)\n\tat org.apache.zeppelin.scheduler.ParallelScheduler$JobRunner.run(ParallelScheduler.java:162)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)\n\tat java.lang.Thread.run(Thread.java:745)\nCaused by: com.datastax.driver.core.exceptions.InvalidQueryException: Unknown identifier marketing_choice\n\tat com.datastax.driver.core.Responses$Error.asException(Responses.java:136)\n\tat com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:179)\n\tat com.datastax.driver.core.RequestHandler.setFinalResult(RequestHandler.java:177)\n\tat com.datastax.driver.core.RequestHandler.access$2500(RequestHandler.java:43)\n\tat com.datastax.driver.core.RequestHandler$SpeculativeExecution.setFinalResult(RequestHandler.java:792)\n\tat com.datastax.driver.core.RequestHandler$SpeculativeExecution.onSet(RequestHandler.java:611)\n\tat com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1013)\n\tat com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:936)\n\tat io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:318)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:304)\n\tat io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:318)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:304)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:318)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:304)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:276)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:263)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:318)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:304)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:846)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:112)\n\t... 1 more\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508169747442_675652982",
+      "id": "20171016-180227_1561848300",
+      "dateCreated": "Oct 16, 2017 6:02:27 PM",
+      "dateStarted": "Oct 16, 2017 8:35:33 PM",
+      "dateFinished": "Oct 16, 2017 8:35:33 PM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "INSERT INTO product_byname(product_name, product_reference, price, marketing_choice) \n    VALUES (\u0027Risk\u0027, 5, 30.5, true);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 6:03:23 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eINSERT INTO product_byname(product_name, product_reference, price, marketing_choice) \n    VALUES (\u0027Risk\u0027, 5, 30.5, true);\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508169764440_-1866367677",
+      "id": "20171016-180244_449217279",
+      "dateCreated": "Oct 16, 2017 6:02:44 PM",
+      "dateStarted": "Oct 16, 2017 6:03:23 PM",
+      "dateFinished": "Oct 16, 2017 6:03:23 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "select * from product_byname;",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 8:34:58 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\n\n\u003cdiv class\u003d\"container\"\u003e\n\u003cdiv class\u003d\"row text-center\"\u003e\n\u003ch4\u003eNo Result\u003c/h4\u003e\n\u003c/div\u003e\n\u003cbr/\u003e\n    \u003cdiv class\u003d\"row\"\u003e\n    \u003cdiv class\u003d\"col-md-3\"\u003e\u003c/div\u003e\n    \u003cdiv class\u003d\"col-md-6 col-offset-md-3 table-responsive table-bordered\"\u003e\n        \u003ctable class\u003d\"table\"\u003e\n            \u003ccaption\u003e\u003ch5\u003eLast query execution info\u003c/h5\u003e\u003c/caption\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eInfo\u003c/th\u003e\n                    \u003cth\u003eValue\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eStatement\u003c/td\u003e\n                    \u003ctd\u003eselect * from product_byname;\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eAchieved Consistency\u003c/td\u003e\n                    \u003ctd\u003eN/A\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eTried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eQueried Hosts\u003c/td\u003e\n                    \u003ctd\u003elocalhost127.0.0.1:9042\u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr\u003e\n                    \u003ctd\u003eSchema In Agreement\u003c/td\u003e\n                    \u003ctd\u003etrue\u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1508169808522_1592586231",
+      "id": "20171016-180328_679491678",
+      "dateCreated": "Oct 16, 2017 6:03:28 PM",
+      "dateStarted": "Oct 16, 2017 8:34:58 PM",
+      "dateFinished": "Oct 16, 2017 8:34:58 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE TABLE products_coincidence_byname(\n    product_name TEXT,\n    coincidence_product_name TEXT,\n    coincidence_times,\n    PRIMARY KEY (product_name,coincidence_times)\n)WITH CLUSTERING ORDER BY (coincidence_times DESC);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 1:29:02 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1508152286228_-379360943",
+      "id": "20171016-131126_992787994",
+      "dateCreated": "Oct 16, 2017 1:11:26 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE TABLE product_bycategory_nameorder(\n    product_name TEXT,\n    category TEXT;\n    price FLOAT,\n    PRIMARY KEY (category, product_name)\n);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 12:46:24 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1508150230787_-748260685",
+      "id": "20171016-123710_289576321",
+      "dateCreated": "Oct 16, 2017 12:37:10 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CREATE TABLE product_bycategory_priceorder(\n    product_name TEXT,\n    category TEXT;\n    price FLOAT,\n    PRIMARY KEY (category, price)\n);",
+      "user": "anonymous",
+      "dateUpdated": "Oct 16, 2017 12:46:49 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1508150760010_19279433",
+      "id": "20171016-124600_1757101501",
+      "dateCreated": "Oct 16, 2017 12:46:00 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Ejercicio_Evaluacion",
+  "id": "2CWN8DPRT",
+  "angularObjects": {
+    "2CV4M7NFN:shared_process": [],
+    "2CV21GNV6:shared_process": [],
+    "2CT9U6356:shared_process": [],
+    "2CUF5X53F:shared_process": [],
+    "2CTXZMCEQ:shared_process": [],
+    "2CVG31XD7:shared_process": [],
+    "2CTEKA15S:shared_process": [],
+    "2CVJVW2U4:shared_process": [],
+    "2CSHSRFN2:shared_process": [],
+    "2CSVPX9AE:shared_process": [],
+    "2CTY8CFWK:shared_process": [],
+    "2CTH3KMSA:shared_process": [],
+    "2CUAZKDG4:shared_process": [],
+    "2CTHGBNQ3:shared_process": [],
+    "2CT45DSJG:shared_process": [],
+    "2CSXGKGCN:shared_process": [],
+    "2CUHBZDZC:shared_process": [],
+    "2CT315UG8:shared_process": [],
+    "2CV1BB4B1:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
